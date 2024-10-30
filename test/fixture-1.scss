@@ -1,0 +1,344 @@
+@mixin reset-list {
+  @function pad() {
+    @return 2;
+  }
+
+  margin: 0;
+  padding: pad();
+  list-style: none;
+}
+
+.extendable-class {
+  color: black;
+}
+
+.example-class {
+  @custom-media --small-viewport (max-width: 30em);
+
+  @media (--small-viewport) {
+    --test: 0px;
+  }
+
+  @media (max-width: 30em) {
+    --test: 1px;
+  }
+
+  --color-0: pink;
+
+  @include reset-list;
+
+  @extend .extendable-class;
+
+  $scss-var: teal;
+
+  span {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $scss-var;
+  }
+
+  &::before {
+    content: "aaa";
+  }
+
+  &:hover {
+    color: var(--color-0);
+  }
+
+  user-select: none;
+  touch-action: manipulation;
+  pointer-events: auto;
+  resize: both;
+  content-visibility: auto;
+  contain: layout paint;
+  will-change: opacity, transform;
+  cursor: pointer;
+  scrollbar-width: thin;
+  scrollbar-color: #333 #f3f3f3;
+  scrollbar-gutter: stable both-edges;
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
+  scroll-padding-left: 20px;
+  scroll-padding-bottom: 15px;
+  scroll-padding-right: 20px;
+  scroll-padding-top: 10px;
+  scroll-padding-block-end: 10px;
+  scroll-padding-block-start: 5px;
+  scroll-padding-block: 5px 10px;
+  scroll-padding-inline-end: 20px;
+  scroll-padding-inline-start: 15px;
+  scroll-padding-inline: 10px;
+  scroll-padding: 10px 20px;
+  scroll-margin-left: 15px;
+  scroll-margin-bottom: 10px;
+  scroll-margin-right: 15px;
+  scroll-margin-top: 5px;
+  scroll-margin-block-end: 20px;
+  scroll-margin-block-start: 10px;
+  scroll-margin-block: 5px;
+  scroll-margin-inline-end: 10px;
+  scroll-margin-inline-start: 10px;
+  scroll-margin-inline: 10px;
+  scroll-margin: 10px;
+  scroll-behavior: smooth;
+  animation-composition: accumulate;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-duration: 2s;
+  animation-name: fadeIn;
+  animation: fadeIn 2s ease 1s infinite alternate forwards;
+  transition-behavior: preserve;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.2s;
+  transition-duration: 0.3s;
+  transition-property: opacity, transform;
+  transition: all 0.3s ease-in-out 0.2s;
+  transform-style: preserve-3d;
+  transform-box: fill-box;
+  transform-origin: center;
+  perspective-origin: left top;
+  perspective: 1000px;
+  scale: 1.1;
+  rotate: 10deg;
+  translate: 20px 30px;
+  transform: translate(20px, 30px) rotate(10deg) scale(1.1);
+  object-position: center;
+  object-fit: cover;
+  mask-repeat: no-repeat;
+  mask-mode: luminance;
+  mask-composite: exclude;
+  mask-clip: border-box;
+  mask-origin: content-box;
+  mask-position: center;
+  mask-size: contain;
+  mask-image: url(mask.png);
+  mask: url(mask.png) center/contain no-repeat border-box;
+  clip-rule: evenodd;
+  clip-path: circle(50%);
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(5px);
+  filter: grayscale(50%);
+  outline-offset: 4px;
+  outline-color: #ff6347;
+  outline-style: solid;
+  outline-width: 2px;
+  outline: 2px solid #ff6347;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+  background-origin: border-box;
+  background-clip: padding-box;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: center;
+  background-position: center top;
+  background-image: url(background.jpg);
+  background-color: #fafafa;
+  background: #fafafa url(background.jpg) center top / cover no-repeat fixed;
+  caret-color: #ff0000;
+  color: #333;
+  line-height: 1.5;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-style: italic;
+  font-stretch: condensed;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font: italic small-caps bold 16px/1.5 Arial, sans-serif;
+  text-orientation: upright;
+  text-combine-upright: digits 2;
+  text-emphasis-position: over left;
+  text-emphasis-color: red;
+  text-emphasis-style: circle;
+  text-emphasis: circle red;
+  text-decoration-skip-ink: auto;
+  text-underline-position: under;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #ff6347;
+  text-decoration-style: dotted;
+  text-decoration-line: underline;
+  text-decoration: underline dotted #ff6347;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  word-break: break-word;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-wrap-style: balance;
+  text-wrap-mode: nowrap;
+  text-wrap: balance;
+  text-rendering: optimizeLegibility;
+  text-indent: 2em;
+  text-overflow: ellipsis;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  text-transform: capitalize;
+  text-align-last: justify;
+  text-align: center;
+  overflow-anchor: none;
+  overflow-block: hidden;
+  overflow-inline: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow: hidden auto;
+  border-collapse: collapse;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+  border-start-end-radius: 5px;
+  border-start-start-radius: 5px;
+  border-radius: 8px;
+  border-image-repeat: stretch;
+  border-image-slice: 30%;
+  border-image-outset: 10px;
+  border-image-width: 5px;
+  border-image-source: url(border.png);
+  border-image: url(border.png) 30% stretch;
+  border-left-color: #ccc;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-left: 2px solid #ccc;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom: 2px solid #ccc;
+  border-right-color: #ccc;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right: 2px solid #ccc;
+  border-top-color: #ccc;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top: 2px solid #ccc;
+  border-block-end-color: #333;
+  border-block-end-style: dotted;
+  border-block-end-width: 3px;
+  border-block-end: 3px dotted #333;
+  border-block-start-color: #333;
+  border-block-start-style: dotted;
+  border-block-start-width: 3px;
+  border-block-start: 3px dotted #333;
+  border-block-color: #333;
+  border-block-style: dotted;
+  border-block-width: 3px;
+  border-inline-end-color: #333;
+  border-inline-end-style: dashed;
+  border-inline-end-width: 2px;
+  border-inline-end: 2px dashed #333;
+  border-inline-start-color: #333;
+  border-inline-start-style: dashed;
+  border-inline-start-width: 2px;
+  border-inline-start: 2px dashed #333;
+  border-inline-color: #333;
+  border-inline-style: dashed;
+  border-inline-width: 2px;
+  border-inline: 2px dashed #333;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 2px;
+  border: 2px solid #ccc;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-block-end: 10px;
+  padding-block-start: 5px;
+  padding-block: 5px 10px;
+  padding-inline-end: 10px;
+  padding-inline-start: 10px;
+  padding-inline: 10px;
+  padding: 10px 15px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-block-end: 5px;
+  margin-block-start: 10px;
+  margin-block: 10px;
+  margin-inline-end: 10px;
+  margin-inline-start: 5px;
+  margin-inline: 5px;
+  margin: 5px 10px;
+  max-height: 100vh;
+  min-height: 100px;
+  height: auto;
+  max-width: 100%;
+  min-width: 200px;
+  width: 50%;
+  max-block-size: 100%;
+  min-block-size: 100px;
+  block-size: auto;
+  max-inline-size: 100%;
+  min-inline-size: 100px;
+  inline-size: 50%;
+  aspect-ratio: 16/9;
+  box-sizing: border-box;
+  order: 1;
+  grid-column-end: span 2;
+  grid-column-start: 1;
+  grid-column: 1 / span 2;
+  grid-row-end: 2;
+  grid-row-start: 1;
+  grid-row: 1 / span 2;
+  grid-area: 1 / 1 / span 2 / span 2;
+  justify-self: center;
+  align-self: stretch;
+  place-self: center stretch;
+  flex-basis: 200px;
+  flex-shrink: 0;
+  flex-grow: 1;
+  flex: 1 0 200px;
+  column-gap: 20px;
+  row-gap: 20px;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  place-items: center;
+  justify-content: center;
+  align-content: center;
+  place-content: center;
+  grid-auto-columns: minmax(100px, auto);
+  grid-auto-rows: minmax(100px, auto);
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header" "main sidebar" "footer footer";
+  grid-template: "header header" "main sidebar" "footer footer" / 1fr 1fr;
+  grid: auto / 1fr 1fr;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-flow: row wrap;
+  display: flex;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  top: 20px;
+  inset-block-end: 10px;
+  inset-block-start: 10px;
+  inset-block: 10px;
+  inset-inline-end: 10px;
+  inset-inline-start: 10px;
+  inset-inline: 10px;
+  inset: 10px;
+  isolation: isolate;
+  z-index: 10;
+  position: relative;
+  color-scheme: light dark;
+  writing-mode: vertical-rl;
+  visibility: visible;
+  appearance: none;
+  all: initial;
+  content: "Example Content";
+  composes: exampleBaseClass;
+}

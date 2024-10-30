@@ -363,10 +363,10 @@ export default {
   rules: {
     "order/order": [
       [
-        // { type: "at-rule", name: "import" },
+        { type: "at-rule", name: "import" },
         // @note https://sass-lang.com/documentation/at-rules/forward/
-        // { type: "at-rule", name: "forward" },
-        // { type: "at-rule", name: "use" },
+        { type: "at-rule", name: "forward" },
+        { type: "at-rule", name: "use" },
         "dollar-variables",
         "at-variables",
         "custom-properties",

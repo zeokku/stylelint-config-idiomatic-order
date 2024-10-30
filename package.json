@@ -1,7 +1,7 @@
 {
   "name": "@zeokku/stylelint-config-idiomatic-order",
   "description": "🐈 Opinionated idiomatic order config for Stylelint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Lutymane",
   "funding": "https://ko-fi.com/zeokku",
   "license": "ISC",

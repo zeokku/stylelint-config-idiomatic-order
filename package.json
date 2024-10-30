@@ -1,18 +1,19 @@
 {
   "name": "@zeokku/stylelint-config-idiomatic-order",
   "description": "🐈 Opinionated idiomatic order config for Stylelint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Lutymane",
   "funding": "https://ko-fi.com/zeokku",
   "license": "ISC",
   "type": "module",
-  "module": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
   "scripts": {
     "test": "node ./test"
   },
   "files": [
-    "index.js",
-    "macros.d.ts"
+    "index.js"
   ],
   "repository": "github:zeokku/stylelint-config-idiomatic-order",
   "keywords": [
